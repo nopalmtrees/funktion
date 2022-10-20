@@ -12,12 +12,21 @@ namespace funktion
         {
             Console.WriteLine("Helle world");
             //anropa Myfunction
+            
             Myfunction();
             Myfunction();
 
             //Anropa Oneortwo med parametervärde
+            int x = 2;
             OneOrTwo(1);
             OneOrTwo(2);
+            OneOrTwo(x);
+
+            //anropar funk seygej och sparar returvärde i variabel
+            string meddelande = SayHey("Tobbe");
+            Console.WriteLine(meddelande);
+
+            Console.WriteLine(SayHey("Ebbot"));
         }
 
         //skapa en ny funktion som heter myfunctio.
@@ -36,10 +45,20 @@ namespace funktion
             }else if (input == 2)
             {
                 Console.WriteLine("input är 2");
-                Console.ReadLine();
-            } 
-
+               
+            }
+            
         }
+        //skapar funktion som returnerar hälsning
+        static string SayHey(string name)
+        {
+            string message = "Hejsan " + name;
+            return message;
+            
+        }
+        
+        
+        
         
     }
 
